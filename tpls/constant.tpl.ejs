@@ -1,4 +1,4 @@
-angular.module("<%- moduleName %>"<% if (deps) { %>, <%= JSON.stringify(deps) %><% } %>)
+angular.module("<%- moduleName %>"<% if (deps[0] != null) { %>, <%= JSON.stringify(deps) %><% } %>)
 <% constants.forEach(function(constant) { %>
 .constant("<%- constant.name %>", <%= constant.value %>)
 <% }) %>
